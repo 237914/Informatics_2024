@@ -5,15 +5,15 @@ import (
 )
 
 type Pig struct {
- Name     string
- Age      int
- Weight   float64
+ Name string
+ Age int
+ Weight float64
 }
 
 func NewPig(name string, age int, weight float64) *Pig {
  return &Pig{
-  Name:   name,
-  Age:    age,
+  Name: name,
+  Age: age,
   Weight: weight,
  }
 }
