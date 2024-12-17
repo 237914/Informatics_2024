@@ -17,9 +17,11 @@ func (f *Food) applyDiscount(discount float64) error {
 	f.Price = f.Price * (1 - discount/100)
 	return nil
 }
+
 func (f *Food) getPrice() float64 {
 	return f.Price
 }
+
 func (f *Food) getProductInfo() string {
 	if f.Name == "" {
 		return ("Не все поля заполнены")

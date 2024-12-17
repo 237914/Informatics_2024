@@ -18,9 +18,11 @@ func (c *Cloth) applyDiscount(discount float64) error {
 	c.Price = c.Price * (1 - discount/100)
 	return nil
 }
+
 func (c *Cloth) getPrice() float64 {
 	return c.Price
 }
+
 func (c *Cloth) getProductInfo() string {
 	if c.Name == "" || c.Size == "" || c.Color == "" {
 		return ("Не все поля заполнены")

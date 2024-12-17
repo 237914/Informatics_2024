@@ -11,6 +11,7 @@ func GetFinalPrice(products []Product) float64 {
 	}
 	return totalCost
 }
+
 func RunLab7() {
 	product1 := &Device{Name: "Ноутбук", Price: 30, Brand: "Honor", Model: "1"}
 	if err := product1.applyDiscount(25); err != nil {

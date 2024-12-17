@@ -18,9 +18,11 @@ func (e *Device) applyDiscount(discount float64) error {
 	e.Price = e.Price * (1 - discount/100)
 	return nil
 }
+
 func (e *Device) getPrice() float64 {
 	return e.Price
 }
+
 func (e *Device) getProductInfo() string {
 	if e.Name == "" || e.Brand == "" || e.Model == "" {
 		return "Не все поля заполнены"
