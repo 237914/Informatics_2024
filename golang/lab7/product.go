@@ -1,11 +1,11 @@
-package lab7
+package Lab7
 
 import (
 	"errors"
 )
 
 type Product interface {
-	applyDiscount(discount float64) error
+	applyDiscount(Discount float64) error
 	getPrice() float64
 	getProductInfo() string
 }

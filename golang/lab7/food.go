@@ -1,26 +1,26 @@
-package lab7
+package Lab7
 
 import (
 	"fmt"
 )
 
-type food struct {
+type Food struct {
 	Name   string
 	Price  float64
 	Weight float64
 }
 
-func (f *food) applyDiscount(discount float64) error {
+func (f *Food) applyDiscount(discount float64) error {
 	if err := validateDiscount(discount); err != nil {
 		return err
 	}
 	f.Price = f.Price * (1 - discount/100)
 	return nil
 }
-func (f *food) getPrice() float64 {
+func (f *Food) getPrice() float64 {
 	return f.Price
 }
-func (f *food) getProductInfo() string {
+func (f *Food) getProductInfo() string {
 	if f.Name == "" {
 		return ("Не все поля заполнены")
 	}

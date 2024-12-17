@@ -1,24 +1,27 @@
-package lab7
+package Lab7
+
 import (
 	"fmt"
 )
-type device struct {
+
+type Device struct {
 	Name  string
 	Price float64
 	Brand string
 	Model string
 }
-func (e *device) applyDiscount(discount float64) error {
+
+func (e *Device) applyDiscount(discount float64) error {
 	if err := validateDiscount(discount); err != nil {
 		return err
 	}
 	e.Price = e.Price * (1 - discount/100)
 	return nil
 }
-func (e *device) getPrice() float64 {
+func (e *Device) getPrice() float64 {
 	return e.Price
 }
-func (e *device) getProductInfo() string {
+func (e *Device) getProductInfo() string {
 	if e.Name == "" || e.Brand == "" || e.Model == "" {
 		return "Не все поля заполнены"
 	}
