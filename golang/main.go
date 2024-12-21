@@ -5,7 +5,7 @@ import (
 
 	"isuct.ru/informatics2022/Lab4"
 	"isuct.ru/informatics2022/Lab6"
-	"isuct.ru/informatics2022/Lab7"
+	Lab7 "isuct.ru/informatics2022/lab7"
 )
 
 func main() {
